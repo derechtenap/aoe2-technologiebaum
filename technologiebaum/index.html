@@ -17,24 +17,111 @@
 
 <body>
 
-    <h1>
-        Technologiebaum
-    </h1>
+    <header class="border">
 
-    <select id="selectBox" onchange="changeCiv();">
-        <option value="">
-            Kulturen
-        </option>
-        <option value="azteken">
-            Azteken
-        </option>
-    </select>
+        <h1>
+            Technologiebaum
+        </h1>
+        <p>
+            Datensatz: <i>Age of Empires II: Definitive Edition - 34223</i>
+        </p>
 
-    <div id="container-civ">
-        <h2 class="text-center">
-            <var id="civ-name">Bitte Kultur auswählen...</var>
-        </h2>
+    </header>
+
+    <nav>
+
+        Bitte Kultur auswählen:
+        <select id="selectBox" size="1" onchange="changeCiv();">
+
+            <option value="">Kulturen</option>
+            <option value="azt">Azteken</option>
+            <option value="ber">Berber</option>
+            <option value="bir">Birmanen</option>
+            <option value="bri">Briten</option>
+            <option value="bul">Bulgaren</option>
+            <option value="byz">Byzantiner</option>
+            <option value="chi">Chinesen</option>
+            <option value="fra">Franken</option>
+            <option value="got">Goten</option>
+            <option value="hun">Hunnen</option>
+            <option value="ind">Inder</option>
+            <option value="ink">Inka</option>
+            <option value="ita">Italiener</option>
+            <option value="jap">Japaner</option>
+            <option value="kel">Kelten</option>
+            <option value="khm">Khmer</option>
+            <option value="kor">Koreaner</option>
+            <option value="kum">Kumanen</option>
+            <option value="lit">Litauer</option>
+            <option value="mal">Malaien</option>
+            <option value="mai">Malier</option>
+            <option value="may">Maya</option>
+            <option value="mon">Mongolen</option>
+            <option value="per">Perser</option>
+            <option value="por">Portugiesen</option>
+            <option value="sar">Sarazenen</option>
+            <option value="sla">Slawen</option>
+            <option value="spa">Spanier</option>
+            <option value="tat">Tataren</option>
+            <option value="teu">Teutonen</option>
+            <option value="tue">Türken</option>
+            <option value="ung">Ungarn</option>
+            <option value="vie">Vietnamesen</option>
+            <option value="wik">Wikinger</option>
+
+        </select>
+
+    </nav>
+
+    <div class="flex height-main">
+
+        <aside class="border">
+
+            <h2 class="text-center">
+                <var id="civ-name">Bitte Kultur auswählen...</var>
+            </h2>
+            <hr>
+            <h3 class="text-center">
+                <var id="civ-typ">Unberittenes Volk von Mönchen</var>
+            </h3>
+
+            <ul>
+                <li>Dorbewohner tragen +5</li>
+                <li>Militäreinheiten 15% schneller erschaffen</li>
+                <li>Mönche +5 LP pro Kloster-Technologie</li>
+                <li>Start mit +50 Gold</li>
+            </ul>
+
+            <p>
+                <span class="font-bold">Spezialeinheit:</span> Jarguarkrieger (Infanterie)
+            </p>
+
+            <p>
+                <span class="font-bold">Spezialtechnologien:</span>
+            </p>
+                <ul>
+                    <li>Speerschleuder (Plänkler +1 Angriffsstärke, +1 Reichweite)</li>
+                    <li>Blumenkriege (+4 Angriffsstärke für Infanterie)</li>
+                </ul>
+            <p>
+                <span class="font-bold">Teambonus:</span> Reliquien erzeugen +33% Gold
+            </p>
+
+        </aside>
+
+        <main class="border">
+
+            -- main --
+
+        </main>
+
     </div>
+
+    <footer class="border">
+
+        -- footer --
+
+    </footer>
 
     <script src="js/civPick.js"></script>
 
