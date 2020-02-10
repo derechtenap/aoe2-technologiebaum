@@ -17,113 +17,105 @@
 
 <body>
 
-    <header class="border">
+    <div class="grid-container">
+        <div class="row">
+            <header class="col-6">
+                <h1>
+                    Age of Empires II: Definitive Edition - Technologiebaum
+                </h1>
+                <p>
+                    Bitte wählen Sie eine Kultur aus:
+                </p>
 
-        <h1>
-            Technologiebaum
-        </h1>
-        <p>
-            Datensatz: <i>Age of Empires II: Definitive Edition - 34223</i>
-        </p>
+                <select id="selectBox" size="1" onchange="setzeKultur();">
 
-    </header>
+                    <option value="0">Kulturen</option>
+                    <option value="1">Azteken</option>
+                    <option value="2">Berber</option>
+                    <option value="3">Birmanen</option>
+                    <option value="4">Briten</option>
+                    <option value="5">Bulgaren</option>
+                    <option value="6">Byzantiner</option>
+                    <option value="7">Chinesen</option>
+                    <option value="8">Franken</option>
+                    <option value="9">Goten</option>
+                    <option value="10">Hunnen</option>
+                    <option value="11">Inder</option>
+                    <option value="12">Inka</option>
+                    <option value="13">Italiener</option>
+                    <option value="14">Japaner</option>
+                    <option value="15">Kelten</option>
+                    <option value="16">Khmer</option>
+                    <option value="17">Koreaner</option>
+                    <option value="18">Kumanen</option>
+                    <option value="19">Litauer</option>
+                    <option value="20">Malaien</option>
+                    <option value="21">Malier</option>
+                    <option value="22">Maya</option>
+                    <option value="23">Mongolen</option>
+                    <option value="24">Perser</option>
+                    <option value="25">Portugiesen</option>
+                    <option value="26">Sarazenen</option>
+                    <option value="27">Slawen</option>
+                    <option value="28">Spanier</option>
+                    <option value="29">Tataren</option>
+                    <option value="30">Teutonen</option>
+                    <option value="31">Türken</option>
+                    <option value="32">Ungarn</option>
+                    <option value="33">Vietnamesen</option>
+                    <option value="34">Wikinger</option>
 
-    <nav>
+                </select>
 
-        Bitte Kultur auswählen:
-        <select id="selectBox" size="1" onchange="changeCiv();">
+                <hr>
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-2" id="civ-info">
+                <h2 class="text-center" id="civ-name">
+                    Bitte Kultur auswählen...
+                </h2>
+                <hr>
+                <h3 class="text-center" id="civ-typ">&nbsp;</h3>
+                <ul id="civ-bonus"></ul>
+                <h4 id="civ-spezial">&nbsp;</h4>
+                <ul id="civ-spezialtechs"></ul>
+                <h4 id="civ-teambonus">&nbsp;</h4>
+            </div>
+            <div class="col-4" id="techtree">
+                <div class="row">
+                    <div class="col-1"><h2>I</h2>Dunkle Zeit</div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-1"><h2>II</h2>Feudalzeit</div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><h2>III</h2>Ritterzeit</div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><h2>IV</h2>Imperialzeit</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="col-6">
+                <hr>
+                <p>
+                    Age of Empires II: Definitive Edition © Microsoft Corporation. AOE2:Technologiebaum wurde gemäß den 
+                    <a href="https://www.xbox.com/de-de/developers/rules">„Verwendungsregeln für Spielinhalte“</a> von
+                    Microsoft unter Verwendung von Inhalten aus Age of Empires II: Definitive Edition erstellt, wird
+                    jedoch von Microsoft nicht unterstützt und steht mit Microsoft in keiner Verbindung.
+                </p>
+                <p>
+                    Datensatz: 34699 - Version 0.13
+                </p>
 
-            <option value="">Kulturen</option>
-            <option value="azt">Azteken</option>
-            <option value="ber">Berber</option>
-            <option value="bir">Birmanen</option>
-            <option value="bri">Briten</option>
-            <option value="bul">Bulgaren</option>
-            <option value="byz">Byzantiner</option>
-            <option value="chi">Chinesen</option>
-            <option value="fra">Franken</option>
-            <option value="got">Goten</option>
-            <option value="hun">Hunnen</option>
-            <option value="ind">Inder</option>
-            <option value="ink">Inka</option>
-            <option value="ita">Italiener</option>
-            <option value="jap">Japaner</option>
-            <option value="kel">Kelten</option>
-            <option value="khm">Khmer</option>
-            <option value="kor">Koreaner</option>
-            <option value="kum">Kumanen</option>
-            <option value="lit">Litauer</option>
-            <option value="mal">Malaien</option>
-            <option value="mai">Malier</option>
-            <option value="may">Maya</option>
-            <option value="mon">Mongolen</option>
-            <option value="per">Perser</option>
-            <option value="por">Portugiesen</option>
-            <option value="sar">Sarazenen</option>
-            <option value="sla">Slawen</option>
-            <option value="spa">Spanier</option>
-            <option value="tat">Tataren</option>
-            <option value="teu">Teutonen</option>
-            <option value="tue">Türken</option>
-            <option value="ung">Ungarn</option>
-            <option value="vie">Vietnamesen</option>
-            <option value="wik">Wikinger</option>
-
-        </select>
-
-    </nav>
-
-    <div class="flex height-main">
-
-        <aside class="border">
-
-            <h2 class="text-center">
-                <var id="civ-name">Bitte Kultur auswählen...</var>
-            </h2>
-            <hr>
-            <h3 class="text-center">
-                <var id="civ-typ">Unberittenes Volk von Mönchen</var>
-            </h3>
-
-            <ul>
-                <li>Dorbewohner tragen +5</li>
-                <li>Militäreinheiten 15% schneller erschaffen</li>
-                <li>Mönche +5 LP pro Kloster-Technologie</li>
-                <li>Start mit +50 Gold</li>
-            </ul>
-
-            <p>
-                <span class="font-bold">Spezialeinheit:</span> Jarguarkrieger (Infanterie)
-            </p>
-
-            <p>
-                <span class="font-bold">Spezialtechnologien:</span>
-            </p>
-                <ul>
-                    <li>Speerschleuder (Plänkler +1 Angriffsstärke, +1 Reichweite)</li>
-                    <li>Blumenkriege (+4 Angriffsstärke für Infanterie)</li>
-                </ul>
-            <p>
-                <span class="font-bold">Teambonus:</span> Reliquien erzeugen +33% Gold
-            </p>
-
-        </aside>
-
-        <main class="border">
-
-            -- main --
-
-        </main>
-
+            </footer>
+        </div>
     </div>
 
-    <footer class="border">
-
-        -- footer --
-
-    </footer>
-
-    <script src="js/civPick.js"></script>
+    <script src="js/kulturInfo.js" defer></script>
 
 </body>
 

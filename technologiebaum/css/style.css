@@ -3,114 +3,91 @@
 /*
     style.css
     ---------------------------------------
-    Version: 0.1
-    Datum: 11.01.2020 - 19:06
+    Version: 0.1.1
+    Datum: 23.01.2020
     ---------------------------------------
 
 */
 
-/* Reset */
-
-html,
-body,
-div,
-span,
-a,
-ul,
-li,
-header,
-main,
-footer,
-article,
-aside {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
 * {
-    scroll-behavior: smooth;
-
+    box-sizing: border-box;
 }
 
 html {
     direction: ltr;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(245, 222, 179, 1);
-    background-image: none;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(222, 184, 135, 1);
 }
 
-header {
-    height: 13vh;
+/** --- GRID --- **/
+/** Source: http://j4n.co/blog/Creating-your-own-css-grid-system **/
+
+.grid-container {
+    width: 100%;
 }
 
-nav {
-    background-color: rgba(0, 0, 0 , 1);
-    color: rgba(255, 255, 255, 1);
-    height: 2vh;
+.row::before,
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-aside {
-    width: 33%;
-    overflow-y: scroll;
-    border-bottom: none !important;
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.666%;
+    padding: 12px;
 }
 
-footer {
-    height: 5vh;
-    border-left: 1px solid rgba(0, 0, 0 , 1);
-    border-right: 1px solid rgba(0, 0, 0 , 1);
-    border-bottom: 1px solid rgba(0, 0, 0 , 1);
+.col-1 {
+    width: 16.666%;
 }
 
-main {
-    width: 67%;
-    border-left: 0 !important;
-    overflow-x: scroll;
+.col-2 {
+    width: 33.333%;
 }
 
-header, nav, footer, aside, main {
-    padding: 10px;
+.col-3 {
+    width: 50%;
 }
 
-var {
-    font-style: normal;
-    color: #151515;
+.col-4 {
+    width: 66.664%;
+}
+
+.col-5 {
+    width: 83.333%;
+}
+
+.col-6 {
+    width: 100%;
+}
+
+/** --- --- **/
+
+hr {
+    height: 1px;
+    color: rgba(0, 0, 0, 1); /** IE **/
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 1); /** Firefox, Opera, Chrome & Safari **/
 }
 
 select {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-hr {
-    border: none;
-    color: rgba(0, 0, 0 , 1);
-    background-color: rgba(0, 0, 0 , 1);
-    height: 1px;
-}
-
-.flex {
-    display: flex;
-}
-
-.border {
-    border: 1px solid rgba(0, 0, 0 , 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .text-center {
     text-align: center;
 }
 
-.font-bold {
-    font-weight: bold;
-}
-
-.height-main {
-    height: calc(75vh - 17px);
+#techtree {
+    border-left: 1px solid rgba(0, 0, 0, 1);
 }
