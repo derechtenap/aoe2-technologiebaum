@@ -15,10 +15,7 @@
     },
     "teambonus": "Reliquien erzeugen +33% Gold",
     "einheiten": {
-        "0": true,
-        "1": false
     },
     "technologien": {
-        "0": false
     }
 }
